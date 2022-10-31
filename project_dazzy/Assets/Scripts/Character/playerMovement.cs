@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    [SerializeField]characterSO characterSO;
     playerInput playerInput => GetComponent<playerInput>();
-    public CharacterController controller => GetComponent<CharacterController>() ;
-    public float speed = 12f;
-    public float gravity = -9.81f;
-    
-
+    public CharacterController controller => GetComponent<CharacterController>();
     Vector3 velocity;
-
-
-    void Start()
-    {
-        
-    }
     void Update()
     {
         charaterMove();
@@ -25,12 +16,13 @@ public class playerMovement : MonoBehaviour
     void charaterMove()
     {
         Vector3 move = transform.right * playerInput.moveX + transform.forward * playerInput.moveY;
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * characterSO.speed * Time.deltaTime);
     }
 
     void characterJump()
     {
-        velocity.y += gravity * Time.deltaTime;
+        
+        velocity.y += characterSO.gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
 }
