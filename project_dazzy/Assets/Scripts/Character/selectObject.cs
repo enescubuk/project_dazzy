@@ -10,6 +10,7 @@ public class selectObject : MonoBehaviour
     public Material selectingMat;
     private Vector3 naber;
     float lastPosx;
+    public Transform selection;
     void Update()
     {
         if (_selection != null)
@@ -22,11 +23,9 @@ public class selectObject : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray,out hit))
         {
-            var selection = hit.transform;
-            Debug.Log(ray);
+            selection = hit.transform;
             if (selection.CompareTag(selectableTag))
             {
-                
                 var selectionRenderer = selection.GetComponent<Renderer>();
                 if (Input.GetMouseButtonDown(0))
                 {
