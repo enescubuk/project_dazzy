@@ -14,9 +14,21 @@ public class scaleAlgoritm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (selectObject.gameObject.tag == "Selectable")
+        
+    }
+    public void checkName(string objectName)
+    {
+        if (objectName == "B" || objectName == "D")
         {
-            Debug.Log(selectObject.selection.gameObject.name);
+            
         }
+        else if (objectName == "a" || objectName == "B")
+        {
+            
+        }
+    }
+    void scale(float firstPos,float lastPos)
+    {
+        
     }
 }

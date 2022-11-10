@@ -1076,6 +1076,10 @@ MonoBehaviour:
   characterSO: {fileID: 11400000, guid: 95172f15d1e36154e862c4366f957649, type: 2}
   selectingMat: {fileID: 2100000, guid: 6d3b97f88d0d5a94e91e59ebdcd20d17, type: 2}
   selection: {fileID: 0}
+  cubeA: {fileID: 111109288}
+  cubeB: {fileID: 343803052}
+  cubeC: {fileID: 2058039126}
+  cubeD: {fileID: 1567065193}
 --- !u!114 &1325100099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,7 +1868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796463038294735083, guid: 2458b428a93cbac49a7f69c0506b6764, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.35
+      value: 2.97
       objectReference: {fileID: 0}
     - target: {fileID: 1796463038294735083, guid: 2458b428a93cbac49a7f69c0506b6764, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1872,7 +1876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796463038294735083, guid: 2458b428a93cbac49a7f69c0506b6764, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.46
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 1796463038294735083, guid: 2458b428a93cbac49a7f69c0506b6764, type: 3}
       propertyPath: m_LocalRotation.w
