@@ -94,29 +94,73 @@ public class selectObject : MonoBehaviour
         //            selection.localScale.z);
         //}
 
-    if (selection.name == "A" || selection.name == "C")
+        if (selection.name == "A")
         {
             cubeB.localScale = new Vector3
-            (cubeB.localScale.x + distance*2,
+            (cubeB.localScale.x + distance,
                 cubeB.localScale.y,
                     cubeB.localScale.z);
             
             cubeB.position = new Vector3
-            (cubeB.position.x + distance,
+            (cubeB.position.x,
                 cubeB.position.y,
-                    cubeB.position.z);
+                    cubeB.position.z + distance/2);
 
             cubeD.localScale = new Vector3
-            (cubeD.localScale.x + distance*2,
+            (cubeD.localScale.x + distance,
                 cubeD.localScale.y,
                     cubeD.localScale.z);
             
             cubeD.position = new Vector3
-            (cubeD.position.x + distance,
+            (cubeD.position.x,
                 cubeD.position.y,
-                    cubeD.position.z);
+                    cubeD.position.z + distance/2);
         }
-        else if (selection.name == "B" || selection.name == "D")
+        else if (selection.name == "B")
+        {
+            cubeC.localScale = new Vector3
+            (cubeC.localScale.x + distance,
+                cubeC.localScale.y,
+                    cubeC.localScale.z);
+            
+            cubeC.position = new Vector3
+            (cubeC.position.x - distance/2,
+                cubeC.position.y,
+                    cubeC.position.z);
+
+            cubeA.localScale = new Vector3
+            (cubeA.localScale.x + distance,
+                cubeA.localScale.y,
+                    cubeA.localScale.z);
+            
+            cubeA.position = new Vector3
+            (cubeA.position.x - distance/2,
+                cubeA.position.y,
+                    cubeA.position.z);
+        }
+        else if (selection.name == "C")
+        {
+            cubeB.localScale = new Vector3
+            (cubeB.localScale.x + distance,
+                cubeB.localScale.y,
+                    cubeB.localScale.z);
+            
+            cubeB.position = new Vector3
+            (cubeB.position.x,
+                cubeB.position.y,
+                    cubeB.position.z - distance/2);
+
+            cubeD.localScale = new Vector3
+            (cubeD.localScale.x + distance,
+                cubeD.localScale.y,
+                    cubeD.localScale.z);
+            
+            cubeD.position = new Vector3
+            (cubeD.position.x,
+                cubeD.position.y,
+                    cubeD.position.z - distance/2);
+        }
+        else if (selection.name == "D")
         {
             cubeC.localScale = new Vector3
             (cubeC.localScale.x + distance,
