@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb31890aaf5eca6409a67547a47d4f6a, type: 3}
-  m_Name: Monkey
+  m_Name: Red
   m_EditorClassIdentifier: 
-  value: 2
-  sprite: {fileID: 21300000, guid: 11d61931ebc99314b930d2d2266c22fd, type: 3}
+  value: 15
+  sprite: {fileID: 21300000, guid: 12101233e96801b40977094c36cd2b86, type: 3}
