@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9123400128b1ad4aa7d5525c0976ecd, type: 3}
+  m_Name: Object
+  m_EditorClassIdentifier: 
+  selectableTag: Selectable
+  onObject: {fileID: 2100000, guid: 13e7329d142b6fa40a29cb110df6e78e, type: 2}
+  selectingObject: {fileID: 2100000, guid: 6d3b97f88d0d5a94e91e59ebdcd20d17, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 9cd1e047013bc9e43b81c3c9c5210b99, type: 2}
