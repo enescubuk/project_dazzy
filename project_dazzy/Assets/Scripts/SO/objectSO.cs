@@ -1,10 +1,11 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Object")]
+[CreateAssetMenu(menuName ="Game/Object")]
 public class objectSO : ScriptableObject
 {
     public string selectableTag;
     public Material onObject;
     public Material selectingObject;
     public Material defaultMaterial;
+    public float objectDragSpeed;
 }
