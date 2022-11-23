@@ -22,6 +22,10 @@ public class selectObject : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray,out hit))
         {
+            if (Input.GetMouseButtonDown(0) && selection.name.Contains("close"))
+                {   
+                    selection.gameObject.GetComponent<closeButton>().invoker();
+                }
             if (hit.transform.name.Contains("Folder"))
             {
                 folderOpener.isFolderOpen(selection);
@@ -48,15 +52,12 @@ public class selectObject : MonoBehaviour
                 }
                 if (Input.GetMouseButton(0))
                 {
+                    Debug.Log(selection.name);
                     
                 }
                 else if (selectionRenderer != null && windowController.moving == false)
                 {
                     selectionRenderer.material = objectSO.onObject;
-                }
-                else if (selection.name.Contains("Folder"))
-                {
-                    Debug.Log("folder");
                 }
                 
             }
