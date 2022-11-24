@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class selectObject : MonoBehaviour
 {
+    [SerializeField]characterSO characterSO;
     [SerializeField]objectSO objectSO;
-    private windowController windowController;
-    folderMovement folderMovement;
-    private folderOpener folderOpener => GetComponent<folderOpener>();
-    private Transform selection;
-    private Renderer selectionRenderer;
 
+    private windowController windowController;
+
+    public Transform selection;
+    Renderer selectionRenderer;
 
     void Update()
     {
@@ -48,23 +48,19 @@ public class selectObject : MonoBehaviour
                 }
                 
             }
-            if (selection.name.Contains("Folder"))
-            {
-                folderOpener.isFolderOpen(selection);
-            }
         }
         if (windowController != null)
         {
             if (windowController.moving == true)
             {
                 windowController.calcMove(ray);
-                if (Input.GetMouseButtonUp(0))
-                {   
-                    windowController.clickDone();
-                    selectionRenderer.material = objectSO.defaultMaterial;
-                    windowController.moving = false;
-                }
             }
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            windowController.clickDone();
+            selectionRenderer.material = objectSO.defaultMaterial;
+            windowController.moving = false;
         }
     }
 }

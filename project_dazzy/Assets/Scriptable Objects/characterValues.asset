@@ -15,4 +15,5 @@ MonoBehaviour:
   mouseSensivity: 500
   speed: 12
   gravity: -9.81
-  jumpHeight: 1.5
+  selectMaterial: {fileID: 2100000, guid: 13e7329d142b6fa40a29cb110df6e78e, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: c1e21ea7dc68966499685ca5736eadab, type: 2}

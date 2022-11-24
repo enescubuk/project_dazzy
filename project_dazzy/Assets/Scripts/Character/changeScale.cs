@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class changeScale : MonoBehaviour 
 {
-    [SerializeField]objectSO objectSO;
     windowController windowController => GetComponent<windowController>();
     private Transform selection;
     Vector3 distance;
     public Transform[] corners = new Transform[2];
+    public Vector3 cornerOffset1,cornerOffset2;
     public void detectDistance(Vector3 firstPos , Vector3 lastPos, GameObject objectGenre)
     {
         distance = lastPos - firstPos;
@@ -22,36 +22,27 @@ public class changeScale : MonoBehaviour
                 bEdge();
                     break;
             
-            case "E Taskbar":
-                eEdge();
-                    break;
-            
             case "AC Corner":
                 cTaskbar();
+                Debug.Log(31313);
                     break;
 
             case "CB Corner":
                 cbTaskbar();
+                Debug.Log(621515125);
                     break;
         }
 
+        Debug.Log(selection.name);
     }
 
+    
 
-    void eEdge()
+    public void calcCornerOffset()
     {
-        for (int i = 0; i <= 1; i++)
-        {
-            windowController.cubes[i].localScale += distance;
-            windowController.cubes[i].position -= distance/2;
-            windowController.cubes[3].localScale += distance/2;
-            windowController.cubes[3].position -= distance/4;
-        }
-        
+        cornerOffset1 = corners[0].position - selection.position;
+        cornerOffset2 = corners[1].position - selection.position;
     }
-
-
-
     private void aEdge()
     {
         for (int i = 2; i <= 4; i++)
@@ -95,6 +86,7 @@ public class changeScale : MonoBehaviour
             Vector3 lastScale = windowController.cubes[i].localScale;
             lastScale.x-= distance.x;
             windowController.cubes[i].localScale = lastScale;
+            Debug.Log(distance);
         }
 
         windowController.cubes[0].transform.position = new Vector3(windowController.cubes[0].transform.position.x - distance.x,windowController.cubes[0].transform.position.y,windowController.cubes[0].transform.position.z);
@@ -103,7 +95,6 @@ public class changeScale : MonoBehaviour
         windowController.cubes[4].transform.position = new Vector3(windowController.cubes[4].transform.position.x - distance.x/2,windowController.cubes[4].transform.position.y,windowController.cubes[4].transform.position.z);
 
         corners[1].transform.position = new Vector3(corners[1].transform.position.x,corners[1].transform.position.y - distance.y,corners[1].transform.position.z);
-        corners[1].GetComponent<Renderer>().material = objectSO.defaultMaterial;
     }
     private void cbTaskbar()
     {
@@ -122,6 +113,7 @@ public class changeScale : MonoBehaviour
             Vector3 lastScale = windowController.cubes[i].localScale;
             lastScale.x+= distance.x;
             windowController.cubes[i].localScale = lastScale;
+            Debug.Log(distance);
         }
 
         windowController.cubes[1].transform.position = new Vector3(windowController.cubes[1].transform.position.x - distance.x,windowController.cubes[1].transform.position.y,windowController.cubes[1].transform.position.z);
@@ -129,6 +121,5 @@ public class changeScale : MonoBehaviour
         windowController.cubes[3].transform.position = new Vector3(windowController.cubes[3].transform.position.x - distance.x/2,windowController.cubes[3].transform.position.y,windowController.cubes[3].transform.position.z);
         windowController.cubes[4].transform.position = new Vector3(windowController.cubes[4].transform.position.x - distance.x/2,windowController.cubes[4].transform.position.y,windowController.cubes[4].transform.position.z);
         corners[0].transform.position = new Vector3(corners[0].transform.position.x,corners[0].transform.position.y - distance.y,corners[0].transform.position.z);
-        corners[0].GetComponent<Renderer>().material = objectSO.defaultMaterial;
     }
 }

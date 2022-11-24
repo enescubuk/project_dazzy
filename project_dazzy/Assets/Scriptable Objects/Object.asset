@@ -16,4 +16,3 @@ MonoBehaviour:
   onObject: {fileID: 2100000, guid: 13e7329d142b6fa40a29cb110df6e78e, type: 2}
   selectingObject: {fileID: 2100000, guid: 6d3b97f88d0d5a94e91e59ebdcd20d17, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 9cd1e047013bc9e43b81c3c9c5210b99, type: 2}
-  objectDragSpeed: 40
