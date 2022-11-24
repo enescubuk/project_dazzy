@@ -249,10 +249,9 @@ GameObject:
   - component: {fileID: 1796463038294735124}
   - component: {fileID: 1796463038294735125}
   - component: {fileID: 1325100098}
-  - component: {fileID: 1587792465}
   m_Layer: 0
   m_Name: FPS
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,21 +336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dc227a0c104114f8be9f13366bf18d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterSO: {fileID: 0}
   objectSO: {fileID: 11400000, guid: 42228680ee8b3384eb25d6efce8ce369, type: 2}
---- !u!114 &1587792465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796463038294735081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf79659317df5b46b2891902a823f44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  folderSO: {fileID: 11400000, guid: df1dd9311c4272f4d994c846df1b5ade, type: 2}
-  offset: {x: 2.87, y: 0.5, z: 0}
+  selection: {fileID: 0}
 --- !u!1 &1796463038435804005
 GameObject:
   m_ObjectHideFlags: 0

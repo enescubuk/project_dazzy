@@ -11,10 +11,7 @@ public class selectObject : MonoBehaviour
     private folderOpener folderOpener => GetComponent<folderOpener>();
     private Transform selection;
     private Renderer selectionRenderer;
-    void Start()
-    {
-        windowController = GameObject.Find("window").GetComponent<windowController>();
-    }
+
 
     void Update()
     {
@@ -22,10 +19,6 @@ public class selectObject : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray,out hit))
         {
-            if (hit.transform.name.Contains("Folder"))
-            {
-                folderOpener.isFolderOpen(selection);
-            }
             if (selection != null && selection.CompareTag(objectSO.selectableTag))
             {
                 selectionRenderer = selection.GetComponent<Renderer>();
@@ -42,7 +35,6 @@ public class selectObject : MonoBehaviour
                 var selectionRenderer = selection.GetComponent<Renderer>();
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Debug.Log(1);
                     selectionRenderer.material = objectSO.selectingObject;
                     windowController.firstClick(selection,ray);
                 }
@@ -54,11 +46,11 @@ public class selectObject : MonoBehaviour
                 {
                     selectionRenderer.material = objectSO.onObject;
                 }
-                else if (selection.name.Contains("Folder"))
-                {
-                    Debug.Log("folder");
-                }
                 
+            }
+            if (selection.name.Contains("Folder"))
+            {
+                folderOpener.isFolderOpen(selection);
             }
         }
         if (windowController != null)

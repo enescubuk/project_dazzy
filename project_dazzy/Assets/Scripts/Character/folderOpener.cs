@@ -27,12 +27,10 @@ public class folderOpener : MonoBehaviour
                 {
                     windowOpen(selection);
                     clickCounter = 0;
-                    Debug.Log("klasör açıldı");
 
                 }
                 else
                 {
-                    Debug.Log("klasör açılamdı");
                     clickCounter = 0;
                 }
             }
