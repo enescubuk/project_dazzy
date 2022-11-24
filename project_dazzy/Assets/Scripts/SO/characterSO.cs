@@ -7,5 +7,6 @@ public class characterSO : ScriptableObject
     public float mouseSensivity = 100f ;
     public float speed = 12f;
     public float gravity = -9.81f;
-    
+    public Material selectMaterial;
+    public Material defaultMaterial;
 }
