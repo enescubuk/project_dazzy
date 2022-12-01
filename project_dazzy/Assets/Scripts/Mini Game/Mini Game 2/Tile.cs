@@ -66,7 +66,6 @@ public sealed class Tile : MonoBehaviour
             
             result.AddRange(neighbour.GetConnectedTiles(exclude));
         }
-        
         return result;
     }
 }
