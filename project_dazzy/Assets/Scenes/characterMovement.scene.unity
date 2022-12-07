@@ -590,30 +590,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7899857019223404355, guid: 582ffb5b437acfc44a5ac8fdac865698, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9cd1e047013bc9e43b81c3c9c5210b99, type: 2}
-    - target: {fileID: 7899857019268590951, guid: 582ffb5b437acfc44a5ac8fdac865698, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ad34497b131c58f4795ce14f7fbd6a92, type: 2}
-    - target: {fileID: 7899857019711525774, guid: 582ffb5b437acfc44a5ac8fdac865698, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ad34497b131c58f4795ce14f7fbd6a92, type: 2}
-    - target: {fileID: 7899857019846730082, guid: 582ffb5b437acfc44a5ac8fdac865698, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ad34497b131c58f4795ce14f7fbd6a92, type: 2}
-    - target: {fileID: 7899857019924467957, guid: 582ffb5b437acfc44a5ac8fdac865698, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ad34497b131c58f4795ce14f7fbd6a92, type: 2}
-    - target: {fileID: 7899857020322593613, guid: 582ffb5b437acfc44a5ac8fdac865698, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ad34497b131c58f4795ce14f7fbd6a92, type: 2}
     - target: {fileID: 7899857020935483648, guid: 582ffb5b437acfc44a5ac8fdac865698, type: 3}
       propertyPath: m_Name
       value: window
@@ -1111,10 +1087,6 @@ PrefabInstance:
     - target: {fileID: 1796463038294735081, guid: 2458b428a93cbac49a7f69c0506b6764, type: 3}
       propertyPath: m_Name
       value: FPS
-      objectReference: {fileID: 0}
-    - target: {fileID: 1796463038294735081, guid: 2458b428a93cbac49a7f69c0506b6764, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1796463038294735083, guid: 2458b428a93cbac49a7f69c0506b6764, type: 3}
       propertyPath: m_RootOrder
