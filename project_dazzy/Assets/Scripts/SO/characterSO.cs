@@ -9,4 +9,5 @@ public class characterSO : ScriptableObject
     public float gravity = -9.81f;
     public Material selectMaterial;
     public Material defaultMaterial;
+    public float jumpHeight;
 }
