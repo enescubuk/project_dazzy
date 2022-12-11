@@ -23,7 +23,7 @@ public class folderOpener : MonoBehaviour
             }
             else if (clickCounter == 1)
             {
-                if (Time.time < nextClickTime && Vector3.Distance(transform.position,selection.position) <= folderSO.clickRange)
+                if (Time.time < nextClickTime )
                 {
                     windowOpen(selection);
                     clickCounter = 0;
