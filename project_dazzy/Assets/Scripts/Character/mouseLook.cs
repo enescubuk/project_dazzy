@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class mouseLook : MonoBehaviour
 {
-    public playerInput playerInput => GetComponentInParent<playerInput>();
+    public playerInput playerInput => GameObject.FindWithTag("Player").GetComponent<playerInput>();
     float xRotation = 0f;
     void Start()
     {
