@@ -19,7 +19,7 @@ public class playerMovement : MonoBehaviour
     }
     void charaterMove()
     {
-        Vector3 move = transform.right * playerInput.moveX + transform.forward * playerInput.moveY ;
+        Vector3 move = transform.right * playerInput.moveX  ;
         controller.Move(move * characterSO.speed * Time.deltaTime * -1);
         velocity.y += characterSO.gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
