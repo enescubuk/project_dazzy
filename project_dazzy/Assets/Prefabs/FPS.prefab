@@ -128,8 +128,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8be618a573b184fb59c5cd473d1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterSO: {fileID: 11400000, guid: 95172f15d1e36154e862c4366f957649, type: 2}
-  velocity: {x: 0, y: 0, z: 0}
+  isJump: 0
+  speed: -10
+  rotationSpeed: 90
+  gravity: -20
+  jumpSpeed: 15
+  moveVelocity: {x: 0, y: 0, z: 0}
+  turnVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &3707425946933726277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,9 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8515d1ccede7274449fe1a99030cfc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 2
-  draggable: 0
-  cube: {fileID: 0}
 --- !u!1001 &3707425948868487968
 PrefabInstance:
   m_ObjectHideFlags: 0

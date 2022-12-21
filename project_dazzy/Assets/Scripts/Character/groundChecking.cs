@@ -9,7 +9,7 @@ public class groundChecking : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         groundCheck = true;
-        playerMovement.velocity.y = 0;
+       // playerMovement.velocity.y = 0;
     }
     void OnTriggerExit(Collider other)
     {
