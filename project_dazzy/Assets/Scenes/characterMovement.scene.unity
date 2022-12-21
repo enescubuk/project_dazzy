@@ -193,10 +193,6 @@ PrefabInstance:
       propertyPath: dieEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 439459869}
-    - target: {fileID: 7375782953673407584, guid: 2c954923339708c45aef17849887023b, type: 3}
-      propertyPath: dieEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: dieEvent
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c954923339708c45aef17849887023b, type: 3}
 --- !u!1 &481006042
