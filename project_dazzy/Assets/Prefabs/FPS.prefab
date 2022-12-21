@@ -186,7 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8515d1ccede7274449fe1a99030cfc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 6
+  distance: 2
+  draggable: 0
+  cube: {fileID: 0}
 --- !u!1001 &3707425948868487968
 PrefabInstance:
   m_ObjectHideFlags: 0

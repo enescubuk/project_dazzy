@@ -34,7 +34,6 @@ public class raycastController : MonoBehaviour
     }
     void dragObject(Transform companionCube)
     {
-        
         if (Input.GetKeyDown(KeyCode.E))
         {
             cube = companionCube.gameObject;
@@ -50,9 +49,6 @@ public class raycastController : MonoBehaviour
                     cube.transform.position = new Vector3(transform.position.x + 4.09f,cube.transform.position.y,cube.transform.position.z);
                 }
 
-            }
-            else
-            {
             }
             draggable = true;
             betweenDistance = transform.position - cube.transform.position;
