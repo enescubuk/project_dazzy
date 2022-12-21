@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 3707425946933726277}
   - component: {fileID: 3142736131307297042}
   - component: {fileID: 3142736131570007809}
+  - component: {fileID: 7630626174598378984}
   m_Layer: 0
   m_Name: FPS
   m_TagString: Player
@@ -173,6 +174,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   folderSO: {fileID: 11400000, guid: df1dd9311c4272f4d994c846df1b5ade, type: 2}
   offset: {x: 2.87, y: 0.5, z: 0}
+--- !u!114 &7630626174598378984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707425946933726649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8515d1ccede7274449fe1a99030cfc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 6
 --- !u!1001 &3707425948868487968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d1f88c9d5da13bf4daf74b6f19941b96, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.143
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d1f88c9d5da13bf4daf74b6f19941b96, type: 3}
       propertyPath: m_LocalRotation.w
