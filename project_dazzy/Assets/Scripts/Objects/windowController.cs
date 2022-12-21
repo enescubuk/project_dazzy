@@ -12,7 +12,7 @@ public class windowController : MonoBehaviour
     Vector3 newPos;
     public bool moving = false;
     public Transform[] cubes = new Transform[5];
-    private int whichEdge;
+    //private int whichEdge;
     public void calcMove(Ray ray)
     {
         newPos.x = (ray.direction.x - firstPosMouse.x)/objectSO.objectDragSpeed;
@@ -31,11 +31,11 @@ public class windowController : MonoBehaviour
         {
             if (_selection.name.Contains("AC"))
             {
-                whichEdge = 0;
+                //whichEdge = 0;
             }
             else
             {
-                whichEdge = 1;
+                //whichEdge = 1;
             }
         }
     }

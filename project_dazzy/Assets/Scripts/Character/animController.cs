@@ -43,4 +43,9 @@ public class animController : MonoBehaviour
     {
         transform.eulerAngles = nextRot;
     }
+
+    public void dieEvent()
+    {
+        Destroy(this.gameObject.transform.parent.gameObject);
+    } 
 }
