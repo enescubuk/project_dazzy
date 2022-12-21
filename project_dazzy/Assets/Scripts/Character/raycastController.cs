@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class raycastController : MonoBehaviour
 {
-    public float distance;
+    private float distance;
+    
     private LayerMask targetLayer;
-    public bool draggable;
-    public GameObject cube;
+    private bool draggable;
+    private GameObject cube;
     Vector3 betweenDistance;
     void Start()
     {

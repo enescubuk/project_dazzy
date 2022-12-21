@@ -6,8 +6,6 @@ using UnityEngine.Events;
 public class laserTrap : MonoBehaviour
 {
     public UnityEvent dieEvent;
-
-    public event Action<int> dieACtion;
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
