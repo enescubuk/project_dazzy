@@ -16,7 +16,7 @@ public class raycastController : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        Debug.DrawLine(transform.position,transform.position + transform.right * distance * -1, Color.green);
+        Debug.DrawLine(transform.position + transform.right * distance,transform.position + transform.right * distance * -1, Color.green);
         if (Physics.Raycast(this.transform.position,transform.TransformDirection(Vector3.right),out hit,distance,targetLayer) || Physics.Raycast(this.transform.position,transform.TransformDirection(Vector3.left),out hit,distance,targetLayer))
         {
             if (hit.collider.tag == "Cube")
@@ -34,9 +34,26 @@ public class raycastController : MonoBehaviour
     }
     void dragObject(Transform companionCube)
     {
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             cube = companionCube.gameObject;
+            float xDistance = cube.transform.position.x - transform.position.x;
+            if (xDistance <= 4 && xDistance >= -4)
+            {
+                if (xDistance < 0)
+                {
+                    cube.transform.position = new Vector3(transform.position.x - 4.09f,cube.transform.position.y,cube.transform.position.z);
+                }
+                else
+                {
+                    cube.transform.position = new Vector3(transform.position.x + 4.09f,cube.transform.position.y,cube.transform.position.z);
+                }
+
+            }
+            else
+            {
+            }
             draggable = true;
             betweenDistance = transform.position - cube.transform.position;
         }
