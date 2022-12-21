@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class raycastController : MonoBehaviour
 {
-    private float distance;
-    
+    private float distance = 2;
+
     private LayerMask targetLayer;
     private bool draggable;
     private GameObject cube;
@@ -24,6 +25,10 @@ public class raycastController : MonoBehaviour
             {
                 dragObject(hit.collider.transform);
             }
+            else if (hit.collider.tag == "Ladder")
+            {
+                climbLadder(hit.collider.transform);
+            }
         }
 
         if (draggable == true)
@@ -33,6 +38,15 @@ public class raycastController : MonoBehaviour
             cube.transform.position = lastBoxPos;
         }
     }
+
+    private void climbLadder(Transform ladder)
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            
+        }
+    }
+
     void dragObject(Transform companionCube)
     {
         if (Input.GetKeyDown(KeyCode.E))
