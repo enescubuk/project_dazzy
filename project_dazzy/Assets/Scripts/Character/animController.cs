@@ -21,6 +21,18 @@ public class animController : MonoBehaviour
         animator.SetTrigger("isJump");
         
     }
+
+    public void JumpEvent()
+    {
+        Debug.Log(31);
+        playerMovement.current.isJump = true;
+        
+    }
+    
+    public void JumpEnd(){
+
+    playerMovement.current.isJump = false;
+    }
     void Update()
     {
         if (Input.GetAxis("Horizontal") > 0)
