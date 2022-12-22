@@ -24,7 +24,6 @@ public class animController : MonoBehaviour
 
     public void JumpEvent()
     {
-        Debug.Log(31);
         playerMovement.current.isJump = true;
         
     }
