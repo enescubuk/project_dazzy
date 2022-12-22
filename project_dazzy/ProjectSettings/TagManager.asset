@@ -8,6 +8,9 @@ TagManager:
   - Cube
   - Ladder
   - Ground
+  - virus
+  - WindowsOpen
+  - WindowsClose
   layers:
   - Default
   - TransparentFX

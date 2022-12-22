@@ -13,6 +13,8 @@ public class playerMovement : MonoBehaviour
     public CharacterController controller => GetComponent<CharacterController>();
     public Vector3 velocity;
 */
+    public static bool WindowsOpenController = false;
+
     public bool isJump;
     public float speed = 3;
     public float rotationSpeed = 90;
@@ -65,6 +67,7 @@ public class playerMovement : MonoBehaviour
     characterController.Move(moveVelocity*  Time.deltaTime);
     transform.Rotate(turnVelocity * Time.deltaTime);
     }
+    
 
     public void Jump(){
 

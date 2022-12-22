@@ -12,17 +12,17 @@ GameObject:
   - component: {fileID: 4593252070388025613}
   - component: {fileID: 4593252070388025601}
   - component: {fileID: 4593252070388025615}
-  - component: {fileID: 4593252070388025610}
   - component: {fileID: 4593252070388025609}
   - component: {fileID: 4593252070388025600}
   - component: {fileID: 4593252070388025602}
+  - component: {fileID: 527401891}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4593252070388025614
 Transform:
   m_ObjectHideFlags: 0
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4593252070388025608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.777, z: -5.401}
-  m_LocalScale: {x: 0.1524328, y: 0.1524328, z: 0.1524328}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,12 +105,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4593252070388025615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137,21 +137,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.28, y: 9.62}
   m_EdgeRadius: 0
---- !u!114 &4593252070388025610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4593252070388025608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a90da28c04d424e95aa9cb7cda10ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 3.4
-  jumpHeight: 7
-  gravityScale: 1.5
 --- !u!114 &4593252070388025609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,13 +144,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4593252070388025608}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13a06547a5dc2ee4dabbfe3eb6e72bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlitchEffect: {fileID: 0}
-  Glitchx: {fileID: 0}
+  GlitchEffect: {fileID: 2854626107793850260, guid: 6c83f33f439e8ac41a5bcaf49cc21adf, type: 3}
+  Glitchx: {fileID: 2854626107793850261, guid: 6c83f33f439e8ac41a5bcaf49cc21adf, type: 3}
+  Player2D: {fileID: 0}
+  Ground: {fileID: 0}
 --- !u!70 &4593252070388025600
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -202,3 +189,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &527401891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593252070388025608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cd7c647b44aca4da48c5353826bb95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128

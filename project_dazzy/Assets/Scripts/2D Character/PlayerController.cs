@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 4f;
-    private float jumpingPower = 8f;
+    [SerializeField] private float speed = 8f;
+    [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
     private Animator anim;
 
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Jump", true);
         }
         Flip();
+        
     }
 
     IEnumerator JumpControl()
@@ -57,7 +58,7 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        rb.velocity = new Vector2(horizontal * -speed, rb.velocity.y);
     }
 
     private bool IsGrounded()
@@ -67,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        if (isFacingRight && horizontal > 0f || !isFacingRight && horizontal < 0f)
         {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;

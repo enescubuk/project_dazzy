@@ -11,22 +11,22 @@ public class Glitch : MonoBehaviour
     public AnalogGlitch Glitchx;
     private bool EffectControl;
     
-    void Start()
-    {
-        Glitchx.scanLineJitter = 0.5f;
-        Glitchx.verticalJump = 0.11f;
-        Glitchx.colorDrift = 0.2f;
-        GlitchEffect.intensity = 0.1f;
-        StartCoroutine(GlitchEffectControl());
-    }
+
+    public GameObject Player;
+    public GameObject Player2D;
+    public GameObject Ground;
+    public GameObject Camera2D;
+    public GameObject MainCamera;
+    
     private void Update()
     {
         if (EffectControl)
         {
-            Glitchx.colorDrift -= 0.015f * Time.deltaTime;
-            Glitchx.verticalJump -= 0.015f * Time.deltaTime;
-            Glitchx.scanLineJitter -= 0.015f * Time.deltaTime;
-            GlitchEffect.intensity -= 0.015f * Time.deltaTime;
+            
+            Glitchx.colorDrift -= 0.035f * Time.deltaTime;
+            Glitchx.verticalJump -= 0.025f * Time.deltaTime;
+            Glitchx.scanLineJitter -= 0.035f * Time.deltaTime;
+            GlitchEffect.intensity -= 0.035f * Time.deltaTime;
         }
 
         if (Glitchx.colorDrift <= 0)
@@ -43,6 +43,24 @@ public class Glitch : MonoBehaviour
         {
             GlitchEffect.intensity = 0;
         }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            MainCamera.SetActive(false);
+            Camera2D.SetActive(true);
+            Ground.SetActive(true);
+            Player2D.SetActive(true);
+            Player.SetActive(false);
+            Glitchx.scanLineJitter = 0.5f;
+            Glitchx.verticalJump = 0.11f;
+            Glitchx.colorDrift = 0.2f;
+            GlitchEffect.intensity = 0.25f;
+            StartCoroutine(GlitchEffectControl());
+        }
     }
 
     IEnumerator GlitchEffectControl()
@@ -50,4 +68,5 @@ public class Glitch : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         EffectControl = true;
     }
+    
 }
