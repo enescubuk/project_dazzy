@@ -5,35 +5,42 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    private LineRenderer lr;
-    private Transform startPoint => transform;
-    
+    LineRenderer lineRenderer => GetComponent<LineRenderer>();
+
     void Start()
     {
-        lr = GetComponent<LineRenderer>();
+            // çizgi rengini kırmızı olarak ayarlayın
+        lineRenderer.startColor = Color.red;
+        lineRenderer.endColor = Color.red;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        lr.SetPosition(0,transform.position);
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
+    Vector3[] positions = CalculatePositions();
+
+    // pozisyon değerlerini Line renderer öğesine atayın
+    lineRenderer.SetPositions(positions);
+
+    RaycastHit hit;
+
+    if (Physics.Raycast(transform.position,Vector3.down,out hit))
+    {
+        if (hit.collider.gameObject.tag == "Player")
         {
-            if (hit.collider)
-            {
-                lr.SetPosition(1,hit.point);
-            }
-            if (hit.transform.tag == "Player")
-            {
-                Destroy(hit.transform.gameObject);
-            }
+            Destroy(hit.transform.gameObject);
         }
-        else lr.SetPosition(1,-transform.right *5000);
     }
 
-    private float[] CalculateBrightnessValues()
-    {
-        throw new NotImplementedException();
+
     }
+    Vector3[] CalculatePositions()
+{
+    
+    // çizgi boyunca pozisyon değerlerini hesaplayın
+    Vector3[] positions = new Vector3[2];
+    positions[0] = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    positions[1] = new Vector3(transform.position.x, transform.position.y-20, transform.position.z);;
+    return positions;
+}
 }
