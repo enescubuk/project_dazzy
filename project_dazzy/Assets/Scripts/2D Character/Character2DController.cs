@@ -39,7 +39,7 @@ public class Character2DController : MonoBehaviour
     void Update()
     {
         // Movement controls
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && Mathf.Abs(r2d.velocity.x) > 0.01f)
         {
             anim.SetBool("Walk",true);
             moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
@@ -74,11 +74,11 @@ public class Character2DController : MonoBehaviour
             anim.SetBool("Jump", true);
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
         }
-        
     }
 
     void FixedUpdate()
     {
+        /*
         Bounds colliderBounds = mainCollider.bounds;
         float colliderRadius = mainCollider.size.x * 0.4f * Mathf.Abs(transform.localScale.x);
         Vector3 groundCheckPos = colliderBounds.min + new Vector3(colliderBounds.size.x * 0.5f, colliderRadius * 0.9f, 0);
@@ -93,16 +93,19 @@ public class Character2DController : MonoBehaviour
                 if (colliders[i] != mainCollider)
                 {
                     isGrounded = true;
+                    Debug.Log("sdjklfghkjf");
                     break;
                 }
             }
         }
-
+        */
         // Apply movement velocity
         r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
-
+        /*
         // Simple debug
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(0, colliderRadius, 0), isGrounded ? Color.green : Color.red);
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(colliderRadius, 0, 0), isGrounded ? Color.green : Color.red);
+        */
     }
+    
 }
