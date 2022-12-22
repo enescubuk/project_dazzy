@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 4901641008275161537}
   - component: {fileID: 1732398742964600248}
   - component: {fileID: 7375782953673407584}
+  - component: {fileID: 1812341906}
   m_Layer: 0
   m_Name: LazerTuzagTek
   m_TagString: Untagged
@@ -325,3 +326,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1812341906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5714487567262079867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aef55922ec73ba43bcfbfdf2f993c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
