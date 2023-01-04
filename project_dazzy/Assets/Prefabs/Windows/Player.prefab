@@ -13,12 +13,11 @@ GameObject:
   - component: {fileID: 4593252070388025601}
   - component: {fileID: 4593252070388025615}
   - component: {fileID: 4593252070388025609}
-  - component: {fileID: 4593252070388025600}
   - component: {fileID: 4593252070388025602}
   - component: {fileID: 527401891}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player2D
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,31 +143,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4593252070388025608}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13a06547a5dc2ee4dabbfe3eb6e72bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GlitchEffect: {fileID: 2854626107793850260, guid: 6c83f33f439e8ac41a5bcaf49cc21adf, type: 3}
   Glitchx: {fileID: 2854626107793850261, guid: 6c83f33f439e8ac41a5bcaf49cc21adf, type: 3}
-  Player2D: {fileID: 0}
+  Player: {fileID: 0}
+  Player2D: {fileID: 4593252070388025608}
   Ground: {fileID: 0}
---- !u!70 &4593252070388025600
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4593252070388025608}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
+  Camera2D: {fileID: 0}
+  MainCamera: {fileID: 0}
 --- !u!95 &4593252070388025602
 Animator:
   serializedVersion: 4
@@ -201,6 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52cd7c647b44aca4da48c5353826bb95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 16
+  jumpingPower: 32
   groundCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2
