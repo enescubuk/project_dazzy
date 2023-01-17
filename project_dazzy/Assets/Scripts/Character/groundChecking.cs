@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class groundChecking : MonoBehaviour
 {
-    playerMovement playerMovement => GetComponentInParent<playerMovement>();
+    //playerMovement playerMovement => GetComponentInParent<playerMovement>();
     public bool groundCheck;
     void OnTriggerEnter(Collider other)
     {

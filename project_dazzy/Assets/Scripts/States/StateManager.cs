@@ -9,6 +9,7 @@ public class StateManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(currentState);
         RunStateMachine();
     }
     void RunStateMachine()

@@ -4,12 +4,29 @@ using UnityEngine;
 
 public class raycastController : MonoBehaviour
 {
+
+    public static raycastController current;
     private float distance = 2;
 
     private LayerMask targetLayer;
     private bool draggable;
     private GameObject cube;
     Vector3 betweenDistance;
+
+    public bool groundCheck;
+
+    private void Awake()
+    {
+        //For Singelton
+        if (current != null && current != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            current = this;
+        }
+    }
     void Start()
     {
         targetLayer = LayerMask.GetMask("Raycastable");
@@ -29,6 +46,19 @@ public class raycastController : MonoBehaviour
             {
                 climbLadder(hit.collider.transform);
             }
+        }
+        Debug.DrawLine(transform.position,transform.position + -transform.up * (distance + 1.75f), Color.green);
+        if(Physics.Raycast(this.transform.position,transform.TransformDirection(Vector3.down),out hit,distance+1.75f,targetLayer))
+        {
+            if (hit.collider.tag == "Ground")
+            {
+                groundCheck = true;
+            }
+            
+        }
+        else
+        {
+            groundCheck = false;
         }
 
         if (draggable == true)
@@ -70,6 +100,7 @@ public class raycastController : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.E))
         {
+            Debug.Log(35);
             draggable = false;
             cube = null;
         }
